@@ -4,6 +4,113 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>3g2</string>
+				<string>3gp</string>
+				<string>3gp2</string>
+				<string>3gpp</string>
+				<string>60d</string>
+				<string>ajp</string>
+				<string>asf</string>
+				<string>asx</string>
+				<string>avchd</string>
+				<string>avi</string>
+				<string>bik</string>
+				<string>bix</string>
+				<string>box</string>
+				<string>cam</string>
+				<string>dat</string>
+				<string>divx</string>
+				<string>dmf</string>
+				<string>dv</string>
+				<string>dvr-ms</string>
+				<string>evo</string>
+				<string>flc</string>
+				<string>fli</string>
+				<string>flic</string>
+				<string>flv</string>
+				<string>flx</string>
+				<string>gvi</string>
+				<string>gvp</string>
+				<string>h264</string>
+				<string>m1v</string>
+				<string>m2p</string>
+				<string>m2ts</string>
+				<string>m2v</string>
+				<string>m4e</string>
+				<string>m4v</string>
+				<string>mjp</string>
+				<string>mjpeg</string>
+				<string>mjpg</string>
+				<string>mkv</string>
+				<string>moov</string>
+				<string>mov</string>
+				<string>movhd</string>
+				<string>movie</string>
+				<string>movx</string>
+				<string>mp4</string>
+				<string>mpe</string>
+				<string>mpeg</string>
+				<string>mpg</string>
+				<string>mpv</string>
+				<string>mpv2</string>
+				<string>mxf</string>
+				<string>nsv</string>
+				<string>nut</string>
+				<string>ogg</string>
+				<string>ogm</string>
+				<string>omf</string>
+				<string>ps</string>
+				<string>qt</string>
+				<string>ram</string>
+				<string>rm</string>
+				<string>rmvb</string>
+				<string>swf</string>
+				<string>ts</string>
+				<string>vfw</string>
+				<string>vid</string>
+				<string>video</string>
+				<string>viv</string>
+				<string>vivo</string>
+				<string>vob</string>
+				<string>vro</string>
+				<string>wm</string>
+				<string>wmv</string>
+				<string>wmx</string>
+				<string>wrap</string>
+				<string>wvx</string>
+				<string>wx</string>
+				<string>x264</string>
+				<string>xvid</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Video file</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>sub</string>
+				<string>srt</string>
+				<string>txt</string>
+				<string>smi</string>
+				<string>ssa</string>
+				<string>ass</string>
+				<string>mpl</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>Subtitle File</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>NSIsRelatedItemType</key>
+			<true/>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconFile</key>
@@ -22,12 +129,14 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.video</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2015 Lucija Frković. All rights reserved.</string>
-	<key>NSMainStoryboardFile</key>
-	<string>Main</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>

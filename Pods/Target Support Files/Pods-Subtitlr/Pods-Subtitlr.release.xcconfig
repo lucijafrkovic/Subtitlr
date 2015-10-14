@@ -1,0 +1,5 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GZIP" "${PODS_ROOT}/Headers/Public/NSData+Base64" "${PODS_ROOT}/Headers/Public/xmlrpc"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GZIP" -isystem "${PODS_ROOT}/Headers/Public/NSData+Base64" -isystem "${PODS_ROOT}/Headers/Public/xmlrpc"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"GZIP" -l"NSData+Base64" -l"xmlrpc"
+PODS_ROOT = ${SRCROOT}/Pods

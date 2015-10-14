@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PopoverController" customModule="Subtitlr" customModuleProvider="target">
+            <connections>
+                <outlet property="languageSelection" destination="Lsc-eo-8VX" id="Y9c-Cf-N8c"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1LX-EH-BqX">
+                    <rect key="frame" x="20" y="49" width="110" height="17"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Subtitle language" id="LDe-oj-XBD">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lsc-eo-8VX">
+                    <rect key="frame" x="20" y="17" width="213" height="26"/>
+                    <animations/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="9Q3-7k-zYU">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="D7o-pz-8uq"/>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="changeLanguage:" target="-2" id="gMi-Ia-haP"/>
+                    </connections>
+                </popUpButton>
+            </subviews>
+            <animations/>
+            <point key="canvasLocation" x="109" y="247"/>
+        </customView>
+        <viewController id="Pvu-Fr-kya" userLabel="Popover View Controller"/>
+        <popover id="51o-Zm-hNE">
+            <connections>
+                <outlet property="contentViewController" destination="Pvu-Fr-kya" id="9RP-j1-cYR"/>
+            </connections>
+        </popover>
+        <userDefaultsController representsSharedInstance="YES" id="Bd9-yv-fUr"/>
+    </objects>
+</document>

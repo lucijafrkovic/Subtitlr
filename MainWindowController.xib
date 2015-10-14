@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="Subtitlr" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="se5-gp-TjO" id="Z2s-bl-FaC"/>
+                <outlet property="dropzone" destination="tJe-EO-YXC" id="ZKP-6G-ysf"/>
+                <outlet property="dropzoneImage" destination="smV-MC-Ubc" id="4Yb-jZ-X7J"/>
+                <outlet property="tableContainer" destination="FUa-AZ-CXX" id="QWD-dY-nB0"/>
+                <outlet property="tableView" destination="Gdy-UL-sJO" id="SqI-5d-6c0"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Subtitlr" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5" userLabel="Main Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <value key="minSize" type="size" width="480" height="270"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO" userLabel="ContainerView">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button toolTip="Settings" focusRingType="none" verticalHuggingPriority="750" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FjB-06-EFn" userLabel="Settings">
+                        <rect key="frame" x="25" y="8" width="14" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="vfB-TG-Bp4"/>
+                        </constraints>
+                        <animations/>
+                        <buttonCell key="cell" type="smallSquare" alternateTitle="Add files" bezelStyle="smallSquare" image="NSActionTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="sHk-Hn-0Ml">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="togglePopover:" target="-2" id="HhW-ap-W2u"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Select video files" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="36h-sr-6T8" userLabel="Add files">
+                        <rect key="frame" x="6" y="8" width="11" height="15"/>
+                        <animations/>
+                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="rgr-V5-sku">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="selectVideoFilesFromFinder:" target="-2" id="Xk4-p7-dYl"/>
+                        </connections>
+                    </button>
+                    <view translatesAutoresizingMaskIntoConstraints="NO" id="tJe-EO-YXC">
+                        <rect key="frame" x="0.0" y="28" width="480" height="242"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="TPG-fb-1E8" userLabel="DropzoneLabelContainer">
+                                <rect key="frame" x="129" y="44" width="223" height="154"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lS7-of-WAd">
+                                        <rect key="frame" x="-2" y="0.0" width="227" height="29"/>
+                                        <animations/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Drop video files here" id="lRV-Qq-2Fq">
+                                            <font key="font" metaFont="system" size="24"/>
+                                            <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="smV-MC-Ubc">
+                                        <rect key="frame" x="55" y="41" width="113" height="113"/>
+                                        <animations/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="dropzone_img" id="CX7-tp-xhi"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="smV-MC-Ubc" firstAttribute="centerX" secondItem="TPG-fb-1E8" secondAttribute="centerX" id="6G0-Js-I0t"/>
+                                    <constraint firstAttribute="width" constant="223" id="HNm-7D-eoA"/>
+                                    <constraint firstAttribute="bottom" secondItem="lS7-of-WAd" secondAttribute="bottom" id="NVu-vm-rU6"/>
+                                    <constraint firstItem="smV-MC-Ubc" firstAttribute="top" secondItem="TPG-fb-1E8" secondAttribute="top" id="e4z-Tt-cC0"/>
+                                    <constraint firstAttribute="height" constant="154" id="lcd-YK-1Be"/>
+                                    <constraint firstItem="smV-MC-Ubc" firstAttribute="centerX" secondItem="lS7-of-WAd" secondAttribute="centerX" id="zDR-1N-CBa"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="TPG-fb-1E8" firstAttribute="centerX" secondItem="tJe-EO-YXC" secondAttribute="centerX" id="B2L-X5-KCf"/>
+                            <constraint firstItem="TPG-fb-1E8" firstAttribute="centerY" secondItem="tJe-EO-YXC" secondAttribute="centerY" id="wV3-xH-bes"/>
+                        </constraints>
+                        <animations/>
+                        <accessibility identifier="dropzoneContainer"/>
+                    </view>
+                    <scrollView hidden="YES" wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="29" horizontalPageScroll="10" verticalLineScroll="29" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUa-AZ-CXX">
+                        <rect key="frame" x="0.0" y="28" width="480" height="242"/>
+                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="QXs-2H-L5y">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="242"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" headerView="eGx-3o-zbm" viewBased="YES" id="Gdy-UL-sJO">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="219"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                    <size key="intercellSpacing" width="3" height="12"/>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <tableViewGridLines key="gridStyleMask" dashed="YES"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn identifier="status" editable="NO" width="42" minWidth="10" maxWidth="3.4028234663852886e+38" id="Fmn-wk-RW7">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Status">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <customCell key="dataCell" alignment="left" id="zyS-Zi-dNf"/>
+                                            <prototypeCellViews>
+                                                <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="5tx-rW-1vO">
+                                                    <rect key="frame" x="1" y="6" width="42" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <animations/>
+                                                </progressIndicator>
+                                            </prototypeCellViews>
+                                        </tableColumn>
+                                        <tableColumn identifier="fileName" editable="NO" width="393" minWidth="40" maxWidth="1000" id="YoF-Ik-U1U">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Video">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="Hag-lq-Xz2">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                            <prototypeCellViews>
+                                                <tableCellView id="6gg-ex-Kw3">
+                                                    <rect key="frame" x="46" y="6" width="391" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField identifier="fileName" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a84-7o-Fp6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="396" height="17"/>
+                                                            <animations/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="aQS-Ff-9Pl">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <connections>
+                                                                <binding destination="6gg-ex-Kw3" name="value" keyPath="objectValue" id="vno-5h-7gI"/>
+                                                            </connections>
+                                                        </textField>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <connections>
+                                                        <outlet property="textField" destination="a84-7o-Fp6" id="RD9-qJ-LwW"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
+                                        </tableColumn>
+                                        <tableColumn identifier="findSubtitle" editable="NO" width="36" minWidth="25" maxWidth="36" id="eTE-Ce-IO3">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="cZ0-wI-jkW">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <prototypeCellViews>
+                                                <tableCellView id="TmE-uP-p0Y">
+                                                    <rect key="frame" x="440" y="6" width="36" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pxp-qO-rkF">
+                                                            <rect key="frame" x="0.0" y="-12" width="33" height="29"/>
+                                                            <animations/>
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" id="nCK-yv-3Nx">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                    </subviews>
+                                                    <animations/>
+                                                    <connections>
+                                                        <outlet property="textField" destination="Pxp-qO-rkF" id="aOc-ys-zIq"/>
+                                                    </connections>
+                                                </tableCellView>
+                                            </prototypeCellViews>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-2" id="Ocf-fc-aHA"/>
+                                        <outlet property="delegate" destination="-2" id="6ng-rO-R3H"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <animations/>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2Aq-3L-QlN">
+                            <rect key="frame" x="0.0" y="226" width="480" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="laD-5B-9tL">
+                            <rect key="frame" x="-100" y="-100" width="15" height="102"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="eGx-3o-zbm">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="23"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </tableHeaderView>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FjB-06-EFn" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="25" id="9Hg-0K-sNu"/>
+                    <constraint firstAttribute="trailing" secondItem="tJe-EO-YXC" secondAttribute="trailing" id="BHJ-pB-Yq7"/>
+                    <constraint firstItem="FUa-AZ-CXX" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="CA9-gU-fpK"/>
+                    <constraint firstAttribute="bottom" secondItem="FUa-AZ-CXX" secondAttribute="bottom" constant="28" id="H9u-7x-3pc"/>
+                    <constraint firstItem="tJe-EO-YXC" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="SXJ-Mm-tFn"/>
+                    <constraint firstAttribute="bottom" secondItem="FjB-06-EFn" secondAttribute="bottom" constant="8" id="Z2k-Mi-cL5"/>
+                    <constraint firstAttribute="trailing" secondItem="FUa-AZ-CXX" secondAttribute="trailing" id="gyl-pL-0za"/>
+                    <constraint firstItem="36h-sr-6T8" firstAttribute="baseline" secondItem="FjB-06-EFn" secondAttribute="baseline" id="hX8-N5-kuR"/>
+                    <constraint firstItem="FjB-06-EFn" firstAttribute="leading" secondItem="36h-sr-6T8" secondAttribute="trailing" constant="8" id="iJh-yn-hmq"/>
+                    <constraint firstAttribute="bottom" secondItem="tJe-EO-YXC" secondAttribute="bottom" constant="28" id="kmd-3c-2dV"/>
+                    <constraint firstItem="FUa-AZ-CXX" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="l5o-4K-DRe"/>
+                    <constraint firstItem="tJe-EO-YXC" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="zmZ-ky-8AL"/>
+                </constraints>
+                <animations>
+                    <caTransition key="subviews">
+                        <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoKkHCBES
+EwsKGR9VJG51bGzUCQoLDA0ODxBWJGNsYXNzVHR5cGVXc3VidHlwZV8QEl9fQ0FDb2RpbmdDb250ZW50
+c4AIgAOAAoAEWWZyb21SaWdodFZtb3ZlSW7SFAkVGFpOUy5vYmplY3RzohYXgAWABoAH0hobHB1aJGNs
+YXNzbmFtZVgkY2xhc3Nlc1dOU0FycmF5ohweWE5TT2JqZWN00hobICFcQ0FUcmFuc2l0aW9uoyIjHlxD
+QVRyYW5zaXRpb25bQ0FBbmltYXRpb25fEA9OU0tleWVkQXJjaGl2ZXLRJidUcm9vdIABAAgAEQAaACMA
+LQAyADcAQQBHAFAAVwBcAGQAeQB7AH0AfwCBAIsAkgCXAKIApQCnAKkAqwCwALsAxADMAM8A2ADdAOoA
+7gD7AQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAABIw
+</mutableData>
+                    </caTransition>
+                </animations>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="dropzone_img" width="113" height="113"/>
+    </resources>
+</document>
