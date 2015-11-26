@@ -554,7 +554,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Subtitlr 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eagerMoose.Subtitlr-2-0";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eagerMoose.Subtitlr;
 				PRODUCT_NAME = Subtitlr;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
@@ -570,7 +570,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Subtitlr 2.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eagerMoose.Subtitlr-2-0";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eagerMoose.Subtitlr;
 				PRODUCT_NAME = Subtitlr;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
