@@ -40,18 +40,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
-    func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
-        return .Copy
-    }
-    
-    func performDragOperation(sender: NSDraggingInfo) -> Bool {
-        print("perform")
-        return true
-    }
-    
-    func concludeDragOperation(sender: NSDraggingInfo) {
-        print("conclude drag")
-        //getSubtitlesForDroppedFiles()
-    }
 }
 
