@@ -4,7 +4,7 @@
 //
 //  Created by Lucija Frković on 26/03/15.
 //  Copyright (c) 2015 Lucija Frković. All rights reserved.
-//
+//  Based on Objective-C hash implementation for Mac by subsmarine.com
 
 import Foundation
 
