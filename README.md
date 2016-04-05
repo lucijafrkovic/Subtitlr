@@ -4,6 +4,6 @@ Subtitlr is an open source OS X app used to find and download subtitles easily. 
 
 ## Installation
 
-Checkout the project in Xcode and build
+Checkout the project and use **Subtitlr 2.0.xcworkspace** to open the project (this is necessary because Subtitlr uses CocoaPods for XMLRPC support).
 
 Alternatevly, you can download Subtitlr.app in a ZIP file [here] (https://www.dropbox.com/s/et60e6lcvi3h2qc/Subtitlr.zip?dl=0). 
