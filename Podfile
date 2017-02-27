@@ -1,9 +1,11 @@
-# Uncomment this line to define a global platform for your project
-platform :osx, ’10.10’
+source 'https://github.com/CocoaPods/Specs.git'
+platform :osx, '10.10'
+use_frameworks!
 
-link_with 'Subtitlr', 'SubtitlrTests'
-
-target 'Subtitlr' do
-  pod 'xmlrpc', '~> 2.3.4’
-  pod 'GZIP', '~> 1.1.1'
+target "Subtitlr" do
+    pod 'xmlrpc', '~> 2.3.4'
+    pod 'GZIP', '~> 1.1.1'
+    target 'SubtitlrTests' do
+        inherit! :search_paths
+    end
 end
